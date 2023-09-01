@@ -3,7 +3,7 @@ import os
 import time 
 import datetime
 
-# Diet Plan Project - Daniel Ogwougwa:
+# Calorie Calculator Project - Daniel Ogwougwa:
 # Conversion Notes:
 #   1 lb = 0.453592 kg
 #   1 in = 2.54 cm 
@@ -78,7 +78,7 @@ def user_profile(): # Store users profile details: Weight, Height, Age, Activity
 def main_menu(): # Main menu of program. User will enter option
     print(current_time.strftime("%d-%m-%Y %H:%M:%S")) # Outputs the current date and time 
     print() # Empty Line 
-    print("Welcome to the Diet Plan Program! ")
+    print("Welcome to the Calorie calculator ")
     print() # Empty Line 
     print() # Empty Line
     time.sleep(2)
