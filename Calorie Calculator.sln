@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34018.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Calorie Calculator", "Calorie Calculator.pyproj", "{DEEAEA55-A9FC-41A0-B516-C9597DF937F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEEAEA55-A9FC-41A0-B516-C9597DF937F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEEAEA55-A9FC-41A0-B516-C9597DF937F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93C01320-338F-498C-B488-8C1B5A10F196}
+	EndGlobalSection
+EndGlobal
