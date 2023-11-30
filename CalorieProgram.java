@@ -22,12 +22,19 @@ public class CalorieProgram{
 
         System.out.println("Please enter your height: ");   // Asks for users height
         Scanner heightReader = new Scanner(System.in);     
-        int user_weight = heightReader.nextInt();
+        int user_height = heightReader.nextInt();
 
         System.out.println("Please choose one of the following options");
         System.out.println("1: Weight gain");
         System.out.println("2: Weight loss");
-        Scanner reader = new Scanner(System.in);    // Creates a Scanner object
-        String input = reader.nextLine();
+        Scanner reader = new Scanner(System.in);    
+        int input = reader.nextInt();
+        if (input == 1){
+            weightGain();
+        } 
+    }
+
+    public static void weightGain(){
+        
     }
 }
