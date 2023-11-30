@@ -2,9 +2,9 @@ import java.util.*;
 
 public class CalorieProgram{
     /*** Global Variables ***/
+    int user_age;
     int user_weight;
     int user_height;
-    int user_age;
 
     // Main Menu 
     public static void main(String[] args) {
@@ -17,8 +17,12 @@ public class CalorieProgram{
         int user_age = ageReader.nextInt();           
 
         System.out.println("Please enter your weight: ");   // Asks for users weight
-        Scanner userinput = new Scanner(System.in);     
-        int user_weight = userinput.nextInt();
+        Scanner weightReader = new Scanner(System.in);     
+        int user_weight = weightReader.nextInt();
+
+        System.out.println("Please enter your height: ");   // Asks for users height
+        Scanner heightReader = new Scanner(System.in);     
+        int user_weight = heightReader.nextInt();
 
         System.out.println("Please choose one of the following options");
         System.out.println("1: Weight gain");
