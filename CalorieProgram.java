@@ -29,12 +29,19 @@ public class CalorieProgram{
         System.out.println("2: Weight loss");
         Scanner reader = new Scanner(System.in);    
         int input = reader.nextInt();
+
         if (input == 1){
             weightGain();
-        } 
+        } else if (input == 2){
+            weightLoss();
+        }
     }
 
     public static void weightGain(){
+
+    }
+
+    public static void weightLoss(){
         
     }
 }
