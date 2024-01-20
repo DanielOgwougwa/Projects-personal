@@ -16,6 +16,7 @@ public class CalorieProgram{
         System.out.println("This program will help you calculate your calories!");
         System.out.println("To calculate your calories, you will need to enter some details!");
 
+        // Asks for users gender and sets gender factor 
         System.out.println("Are you male or female?");
         Scanner genderReader = new Scanner(System.in);
         user_gender = genderReader.nextLine();
@@ -37,6 +38,12 @@ public class CalorieProgram{
         Scanner heightReader = new Scanner(System.in);     
         user_height = heightReader.nextDouble();
 
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        
         user_maintenance = (10 * user_weight) + (6.25 * user_height) - (5 * user_age) + gender_factor * activity_factor;
         System.out.println("Based on the details you have entered your calorie maintenance is: " + user_maintenance);
 
