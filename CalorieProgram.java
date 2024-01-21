@@ -44,8 +44,14 @@ public class CalorieProgram{
             e.printStackTrace();
         }
         
-        user_maintenance = (10 * user_weight) + (6.25 * user_height) - (5 * user_age) + gender_factor * activity_factor;
+        user_maintenance = (10 * user_weight) + (6.25 * user_height) - (5 * user_age) + gender_factor * activity_factor;    // calculates users calorie maintenance 
         System.out.println("Based on the details you have entered your calorie maintenance is: " + user_maintenance);
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
 
         System.out.println("Please choose one of the following options");
         System.out.println("1: Weight gain");
