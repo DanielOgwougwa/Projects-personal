@@ -50,10 +50,10 @@ public class CalorieProgram{
         pause(3000);
         
         user_maintenance = (10 * user_weight) + (6.25 * user_height) - (5 * user_age) + gender_factor * activity_factor;    // calculates users calorie maintenance 
-        System.out.println("\r");
+        // System.out.println("\r");
         System.out.println("Based on the details you have entered your calorie maintenance is: " + user_maintenance);
 
-        pause(2000);
+        pause(5000);
 
         System.out.print("\033[H\033[2J");  // clears the screen
         System.out.println("Please choose one of the following options");
@@ -71,6 +71,7 @@ public class CalorieProgram{
     public static void weightGain(){
         pause(1000);
         System.out.print("\033[H\033[2J");  // clears the screen 
+        pause(1000);
         System.out.println("In order to gain weight you must be in a calorie surplus");
         System.out.println("These are the details you have entered: ");
         System.out.println("age: " + user_age + " weight: " + user_weight + " height: " + user_height);
