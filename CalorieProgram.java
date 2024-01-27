@@ -10,6 +10,15 @@ public class CalorieProgram{
     static int gender_factor;
     static int activity_factor;
 
+    /*** Pause Function ***/
+    public static void pause(int ms) {
+        try { 
+            Thread.sleep(ms);
+        } catch (InterruptedException e) {
+            System.err.format("InterruptedException : %s%n", e);
+        }
+    }
+
     // Main Menu 
     public static void main(String[] args) {
         System.out.println("Welcome to the calorie program!");
@@ -38,21 +47,15 @@ public class CalorieProgram{
         Scanner heightReader = new Scanner(System.in);     
         user_height = heightReader.nextDouble();
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e){
-            e.printStackTrace();
-        }
+        pause(3000);
         
         user_maintenance = (10 * user_weight) + (6.25 * user_height) - (5 * user_age) + gender_factor * activity_factor;    // calculates users calorie maintenance 
+        System.out.println("\r");
         System.out.println("Based on the details you have entered your calorie maintenance is: " + user_maintenance);
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e){
-            e.printStackTrace();
-        }
+        pause(2000);
 
+        System.out.print("\033[H\033[2J");  // clears the screen
         System.out.println("Please choose one of the following options");
         System.out.println("1: Weight gain");
         System.out.println("2: Weight loss");
@@ -66,6 +69,8 @@ public class CalorieProgram{
     }
 
     public static void weightGain(){
+        pause(1000);
+        System.out.print("\033[H\033[2J");  // clears the screen 
         System.out.println("In order to gain weight you must be in a calorie surplus");
         System.out.println("These are the details you have entered: ");
         System.out.println("age: " + user_age + " weight: " + user_weight + " height: " + user_height);
