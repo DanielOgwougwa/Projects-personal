@@ -8,7 +8,12 @@ public class CalorieProgram{
     static double user_maintenance; 
     static String user_gender;
     static int gender_factor;
-    static int activity_factor;
+    static double activity_factor;
+    static double activity_choice;
+
+    /*** Conversions ***/
+    // 1lb = 0.453592kg 
+    // 1in = 2.54cm
 
     /*** Pause Function ***/
     public static void pause(int ms) {
@@ -47,6 +52,20 @@ public class CalorieProgram{
         Scanner heightReader = new Scanner(System.in);     
         user_height = heightReader.nextDouble();
 
+        System.out.println("How active are you?");
+        System.out.println("1: Inactive");
+        System.out.println("2: Moderately active");
+        System.out.println("3: Very active");
+        Scanner activityReader = new Scanner(System.in);
+        activity_choice = activityReader.nextDouble();
+        if (activity_choice == 1){
+            activity_factor = 1.2;
+        } else if (activity_choice == 2){
+            activity_factor = 1.55;
+        } else if (activity_choice == 3){
+            activity_factor = 1.725;
+        }
+
         pause(3000);
         
         user_maintenance = (10 * user_weight) + (6.25 * user_height) - (5 * user_age) + gender_factor * activity_factor;    // calculates users calorie maintenance 
@@ -79,5 +98,7 @@ public class CalorieProgram{
 
     public static void weightLoss(){
         System.out.println("To lose weight, you have to be in a calorie deficit");
+        System.out.println("These are the details you have entered: ");
+        System.out.println("age: " + user_age + " weight: " + user_weight + " height: " + user_height);
     }
 }
