@@ -87,6 +87,8 @@ public class CalorieProgram{
         }
     }
 
+// new comment 
+
     public static void weightGain(){
         pause(1000);
         System.out.print("\033[H\033[2J");  // clears the screen 
